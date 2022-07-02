@@ -13,9 +13,9 @@ class AccessionMARCExport
   def add_payment(accession, payment)
     record = MARC::Record.new()
 
-	# inserts characters for markers whose absence was making our workflows fail
-	# See https://www.loc.gov/marc/bibliographic/bdleader.html for more
-	# Record status = New
+    # inserts characters for markers explicitly to stabilize workflow
+    # See https://www.loc.gov/marc/bibliographic/bdleader.html for more
+    # Record status = New
     record.leader[5] = 'n'
     # Type of Record = Mixed
     record.leader[6] = 'p'
