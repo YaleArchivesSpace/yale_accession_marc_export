@@ -143,7 +143,7 @@ class PendingPayments
         fund_code,
         cost_center.to_s[-1],
         spend_category.to_s[-3..-1]
-      ].compact.join.gsub(/[^a-zA-Z0-9\- &.]/, '')
+      ].compact.join
     end
 
     def nice_map
